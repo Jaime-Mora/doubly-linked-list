@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product App</title>
+    <!-- Bootswatch Cosmo Theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Products App</a>
+    </nav>
+
+
+    <div class="container">
+        <!-- APPLICATION -->
+        <div id="App" class="row pt-5">
+
+            <!-- FORM -->
+            <div class="col-md-4">
+                <div class="card">
+
+                    <div class="card-header">
+                        <h4>Add A Product</h4>
+                    </div>
+
+                    <form  class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="Nombre" placeholder="Product Name" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="number" id="Precio" step="0.00" placeholder="Product Price"
+                                class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="number" id="Cantidad" step="0" placeholder="Product quantity"
+                            class="form-control">
+                        </div>
+            
+                        <div class="form-group">
+                            <input type="text" id="ID" placeholder="Product ID"
+                                class="form-control">
+                        </div>
+
+                        <button onclick="Agregar()" class="btn btn-primary" >Save</button> 
+                        <button onclick="Editar()" class="btn btn-primary" >Edit</button>
+                        <button onclick="limpiar()" class="btn btn-primary" > Clear List </button>
+                    </form>
+
+                    <form class="card-body" > 
+                        <div class="form-group">
+                            <input type="text" id="textoabuscar" step="0.00" placeholder="search by ID"
+                            class="form-control"> <br>
+                            <button onclick="Buscar()" class="btn btn-primary" > Search</button> 
+                            <button onclick="Delete()" class="btn btn-primary" > Delete</button> 
+                            <p id="resultado"></p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button onclick="lista()" class="btn btn-primary" >Product List</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+
+            <!-- PRODUCTS LIST -->
+            <div id="product-list" class="col-md-8">
+                <div class="row pt-5" >
+                       <p id="lista"></p>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+    
+  <script src="Linked.js" ></script>
+</body>
+
+</html>
